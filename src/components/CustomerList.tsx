@@ -1,8 +1,6 @@
 import React from 'react';
-import { CustomerCard } from './CustomerCard';
+import CustomerCard from './CustomerCard';
 import { Customer, CustomerListProp } from '../types';
-
-
 
 const CustomerList: React.FC<CustomerListProp> = ({ customers, setSelectedCustomer }) => {
   return (

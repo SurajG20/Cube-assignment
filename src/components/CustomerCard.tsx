@@ -1,9 +1,7 @@
 import React from 'react';
 import { CustomerCardProps } from '../types';
 
-
-
-export const CustomerCard: React.FC<CustomerCardProps> = ({ item, setSelectedCustomer }) => {
+const CustomerCard: React.FC<CustomerCardProps> = ({ item, setSelectedCustomer }) => {
   return (
     <div className='customer-list__item' onClick={() => setSelectedCustomer(item)}>
       <p className='customer-list__name'>{item.name}</p>
@@ -11,3 +9,5 @@ export const CustomerCard: React.FC<CustomerCardProps> = ({ item, setSelectedCus
     </div>
   );
 };
+
+export default CustomerCard;
