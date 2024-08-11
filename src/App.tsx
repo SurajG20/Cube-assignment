@@ -9,8 +9,6 @@ import CustomerList from './components/CustomerList';
 const YOUR_PEXELS_API_KEY = ' NNlc1mnJ375DAmv0HGR26VK9yPdOicD1qBjvFPrTRAVcSRfjcwYGK89y';
 
 function App() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [customers, setCustomers] = useState<Customer[]>(customerData);
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null);
   const [images, setImages] = useState<ImageProp[]>([]);
 
@@ -47,7 +45,7 @@ function App() {
       <section className='app__wrapper'>
         <h1 className='app__title'>React Assignment</h1>
         <div className='app__content'>
-          <CustomerList customers={customers} setSelectedCustomer={setSelectedCustomer} />
+          <CustomerList customers={customerData} setSelectedCustomer={setSelectedCustomer} />
           <CustomerDetails images={images} selectedCustomer={selectedCustomer} />
         </div>
       </section>
