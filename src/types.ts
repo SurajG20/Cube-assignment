@@ -18,9 +18,12 @@ export type CustomerListProp = {
 };
 
 export type ImageProp = {
-  id: string;
-  download_url: string;
-  author: string;
+  id: number;
+  url: string;
+  alt: string;
+  src:{
+    tiny:string
+  }
 };
 
 export type ImageGridProp = {

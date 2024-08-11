@@ -1,5 +1,4 @@
-import { ImageGridProp, ImageProp } from "../types";
-
+import { ImageGridProp, ImageProp } from '../types';
 
 const ImageGrid: React.FC<ImageGridProp> = ({ images }) => {
   return (
@@ -7,7 +6,7 @@ const ImageGrid: React.FC<ImageGridProp> = ({ images }) => {
       {images &&
         images.map((image: ImageProp) => (
           <div key={image.id} className='image-grid__item'>
-            <img loading='lazy' src={image.download_url} alt={image.author} className='image-grid__img' />
+            <img loading='lazy' src={image.src.tiny} alt={image.alt} className='image-grid__img' />
           </div>
         ))}
     </div>
