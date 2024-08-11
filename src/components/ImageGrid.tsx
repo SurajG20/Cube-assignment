@@ -1,25 +1,7 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { ImageGridProp, ImageProp } from "../types";
 
-export type ImageProp = {
-  id: string;
-  download_url: string;
-  author: string;
-};
-const ImageGrid = () => {
-  const [images, setImages] = useState<ImageProp[]>([]);
 
-  const getImages = async () => {
-    try {
-      const response = await axios.get<ImageProp[]>('https://picsum.photos/v2/list?limit=9');
-      setImages(response.data);
-    } catch (error) {
-      console.error('Error fetching images:', error);
-    }
-  };
-  useEffect(() => {
-    getImages();
-  }, []);
+const ImageGrid: React.FC<ImageGridProp> = ({ images }) => {
   return (
     <div className='image-grid'>
       {images &&

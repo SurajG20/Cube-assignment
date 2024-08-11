@@ -1,19 +1,11 @@
 import React from 'react';
+import { CustomerCardProps } from '../types';
 
-export type Customer = {
-  id: number;
-  name: string;
-  title: string;
-  address: string;
-};
 
-type CustomerCardProps = {
-  item: Customer;
-};
 
-export const CustomerCard: React.FC<CustomerCardProps> = ({ item }) => {
+export const CustomerCard: React.FC<CustomerCardProps> = ({ item, setSelectedCustomer }) => {
   return (
-    <div className='customer-list__item'>
+    <div className='customer-list__item' onClick={() => setSelectedCustomer(item)}>
       <p className='customer-list__name'>{item.name}</p>
       <div className='customer-list__title'>{item.title}</div>
     </div>

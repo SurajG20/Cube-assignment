@@ -1,12 +1,14 @@
 import React from 'react';
-import { customerData } from '../customerData';
-import { CustomerCard, Customer } from './CustomerCard';
+import { CustomerCard } from './CustomerCard';
+import { Customer, CustomerListProp } from '../types';
 
-const CustomerList: React.FC = () => {
+
+
+const CustomerList: React.FC<CustomerListProp> = ({ customers, setSelectedCustomer }) => {
   return (
     <div className='customer-list'>
-      {customerData.map((item: Customer) => (
-        <CustomerCard key={item.id} item={item} />
+      {customers.map((item: Customer) => (
+        <CustomerCard key={item.id} item={item} setSelectedCustomer={setSelectedCustomer} />
       ))}
     </div>
   );

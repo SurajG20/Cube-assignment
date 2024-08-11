@@ -1,4 +1,4 @@
-export const customerData = [
+const customerData = [
   {
     id: 0,
     name: 'John Doe',
@@ -120,3 +120,4 @@ export const customerData = [
     address: '1717 Cedar St, Springfield, IL'
   }
 ];
+export default customerData;
